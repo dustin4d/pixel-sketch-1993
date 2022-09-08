@@ -8,7 +8,28 @@
 }
 
 h1 {
-    color: var(--pink);
+    color: var(--highlight);
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+#toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#toolbar button {
+    border-radius: 0;
+    height: 40px;
+    width: 100px;
+    padding: 0 10px;
+   
+    color: var(--foreground);
+    background-color: var(--background);
+    border-color: var(--foreground);
+    border: 1px solid;
 }
 
 .container {
