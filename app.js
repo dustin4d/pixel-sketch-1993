@@ -1,12 +1,9 @@
-const container = document.querySelector('.container')
+const gridContainer = document.querySelector('.grid-container')
 
 function addSquare() {
-    const newSquare = document.createElement('canvas')
-    const squareContent = document.createTextNode('<canvas></canvas>')
-    newSquare.appendChild(squareContent)
-
-    container.appendChild(newSquare)
-    newSquare.classList.add('square')
+    const canvas = document.createElement('div')
+    gridContainer.appendChild(canvas)
+    canvas.classList.add('')
 }
 
 for (let i = 0; i <= 32; i++){
