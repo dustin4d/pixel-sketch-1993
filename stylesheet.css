@@ -1,9 +1,14 @@
 :root {
-    --background: #012A36;
-    --shadow: #7B7263;
-    --mint: #BCD8C1;
-    --pink: #FF729F;
-    --lightbrown: #E7C8DD;
+    /* coolors.co palette */
+    --background: #323031;
+    --foreground: #FDFFFC;
+    --highlight: #7692FF;
+
+    background-color: var(--background);
+}
+
+h1 {
+    color: var(--pink);
 }
 
 .container {
