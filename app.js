@@ -9,6 +9,6 @@ function addSquare() {
     newSquare.classList.add('square')
 }
 
-for (let i = 0; i <= 16; i++){
+for (let i = 0; i <= 32; i++){
     addSquare();
 }

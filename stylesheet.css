@@ -1,9 +1,17 @@
+:root {
+    --background: #012A36;
+    --shadow: #7B7263;
+    --mint: #BCD8C1;
+    --pink: #FF729F;
+    --lightbrown: #E7C8DD;
+}
+
 .container {
-    border: 4px solid gray;
 }
 
 .square {
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     border: 1px solid black;
+    margin: 0;
 }
