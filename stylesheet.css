@@ -32,7 +32,8 @@ h1 {
     border: 1px solid;
 }
 
-.container {
+.grid-container {
+    margin: 0 auto;
 }
 
 .square {
@@ -40,4 +41,17 @@ h1 {
     height: 10px;
     border: 1px solid black;
     margin: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    gap: 10px;
+
+    color: var(--foreground);
 }
