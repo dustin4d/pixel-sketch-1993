@@ -33,7 +33,7 @@ h1 {
 }
 
 .grid-container {
-    margin: 0 auto;
+    display: grid;
 }
 
 .square {
