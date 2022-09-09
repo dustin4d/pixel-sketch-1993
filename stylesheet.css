@@ -1,23 +1,33 @@
+@font-face {
+    font-family: PixelOperator;
+    src: url(./PixelOperator.ttf);
+}
+
 :root {
     /* coolors.co palette */
-    --background: #323031;
-    --foreground: #FDFFFC;
-    --highlight: #7692FF;
+    --background: #000000;
+    --foreground: #FFFFFF;
+    --highlight: #00CC00;
 
     background-color: var(--background);
+
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     color: var(--highlight);
-
-    margin: 0 auto;
-    text-align: center;
+    font-family: PixelOperator;
+    margin: 0;
 }
 
 #toolbar {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 #toolbar button {
@@ -26,7 +36,7 @@ h1 {
     width: 100px;
     padding: 0 10px;
    
-    color: var(--foreground);
+    color: var(--highlight);
     background-color: var(--background);
     border-color: var(--foreground);
     border: 1px solid;
@@ -34,11 +44,12 @@ h1 {
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+
     width: 400px;
     height: 400px;
-    margin: 0 auto;
-    margin-top: 20px;
-    background-color: var(--foreground);
+    border: 1px solid var(--highlight);
 }
 
 .square {
@@ -59,4 +70,5 @@ footer {
     gap: 10px;
 
     color: var(--foreground);
+    font-family: PixelOperator;
 }
