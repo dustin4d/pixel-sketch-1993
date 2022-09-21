@@ -35,6 +35,13 @@ h1 {
     gap: 4px;
 }
 
+#toolbar input {
+    border-radius: 0;
+    height: 2em;
+    width: 100px;
+    padding: 0 10px;
+}
+
 #toolbar button {
     border-radius: 0;
     height: 2em;
@@ -52,6 +59,8 @@ h1 {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 
     width: 400px;
     height: 400px;
@@ -75,4 +84,8 @@ h1 {
 footer {
     color: var(--foreground);
     font-family: PixelOperator;
+}
+
+.grid-cell {
+    border: 1px solid white;
 }
