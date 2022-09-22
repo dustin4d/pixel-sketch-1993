@@ -17,8 +17,10 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 400px;
     gap: 5px;
+
+    margin: auto;
 }
 
 h1 {
@@ -26,7 +28,14 @@ h1 {
     font-family: PixelOperator;
     font-size: 1em;
 
-    margin: 0;
+    margin-right: auto;
+}
+
+.cursor-blink {
+    border-right: 1px solid var(--highlight);
+    padding-right: 6px;
+    font-size: 1em;
+    animation-name: blink-animation;
 }
 
 #toolbar {
@@ -87,5 +96,4 @@ footer {
 }
 
 .grid-cell {
-    border: 1px solid white;
 }
