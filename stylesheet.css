@@ -39,14 +39,15 @@
     animation-name: blink-animation;
 }
 
-#toolbar {
+
+/* Toolbar and colorbar */
+.toolbar {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-
-#toolbar button {
+.toolbar button {
     border-radius: 0;
     height: 2em;
     width: 100px;
@@ -59,7 +60,7 @@
     border: 1px solid var(--highlight);
 }
 
-#colorbar {
+.colorbar {
     height: 2em;
     border: 1px solid var(--highlight);
     width: 100%;
@@ -72,7 +73,7 @@
     height: 100%;
 }
 
-#colorbar button {
+.colorbar button {
     flex-grow: 1;
     height: 1.7em;
     border: 1px solid var(--highlight);
@@ -81,6 +82,17 @@
     margin-right: 4px;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+/* Colorbar Definitions for the colorbar */
 #color-red {
     background-color: #b30000;
 }
@@ -113,16 +125,8 @@
     background-color: #000000;
 }
 
-/* .hidden {
-    display: none;
-}
 
-.show {
-    display: block;
-}
-*/
-
-
+/* Drawing element */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(16, 1fr);

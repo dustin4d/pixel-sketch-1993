@@ -2,27 +2,38 @@
 const gridCell = document.querySelector('.grid-cell')
 const gridContainer = document.querySelector('.grid-container')
 const resolutionTag = document.querySelector('.resolution-tag')
-const colorButton = document.querySelector('#color-menu')
-const toolbar = document.querySelector('#toolbar')
+const toolbar = document.querySelector('.toolbar')
+const colorbar = document.querySelector('.colorbar')
 const buttons = document.querySelector('button')
-const colorBtn = document.querySelector('.colorBtn')
+const colorBtn = document.querySelector('#colorBtn')
 const returnBtn = document.querySelector('.return-button')
+const palette = document.querySelectorAll('.palette')
+
+// Current pen color
+let currentColor
 
 // Event Listeners
-/* colorBtn.addEventListener("click", function() {
+colorBtn.addEventListener('click', function() {
+    // Hide the toolbar
     toolbar.classList.remove('show')
     toolbar.classList.add('hidden')
-    colorButton.classList.add('show')
-    colorButton.classList.remove('hidden')
+
+    // Show the colorbar
+    colorbar.classList.add('show')
+    colorbar.classList.remove('hidden')
 })
 
-returnBtn.addEventListener('click', function() {
-    colorButton.classList.add("hidden")
-    colorButton.classList.remove('show')
-    toolbar.classList.remove('hidden')
-    toolbar.classList.add('show')
-})
-*/
+// Get the value of the element's background-color
+// then assign it to currentColor
+for(let i = 0; i < palette.length; i++) {
+    i.addEventListener('click', function() {
+        console.log(i.style.backgroundColor)
+    })
+}
+
+for(let i = 0; i < palette.length; i++) {
+    console.log(`${i + 1} total colors.`)
+}
 
 // Logic
 function addSquare() {
@@ -36,11 +47,6 @@ let currentRes = 16;
 for (let i = 0; i < currentRes ** 2; i++){
     addSquare();
 }
-
-/* Add function that toggles between expanded color menu and the condensed menu,
- *  in addition to hiding the other two buttons, as to make room for the expanded
- *  color menu.
- */
 
 function swapBars() {
     buttons.remove();
