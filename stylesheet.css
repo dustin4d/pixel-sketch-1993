@@ -1,6 +1,6 @@
 @font-face {
     font-family: PixelOperator;
-    src: url(./PixelOperator.ttf);
+    src: url(./src/PixelOperator.ttf);
 }
 
 :root {
@@ -27,6 +27,7 @@
     color: var(--highlight);
     font-family: PixelOperator;
     font-size: 1em;
+    font-weight: 100;
 
     margin-right: auto;
 }
@@ -44,25 +45,83 @@
     gap: 4px;
 }
 
-#toolbar input {
-    border-radius: 0;
-    height: 2em;
-    width: 100px;
-    padding: 0 10px;
-}
 
 #toolbar button {
     border-radius: 0;
     height: 2em;
     width: 100px;
     padding: 0 10px;
+    font-size: 1em;
   
     font-family: PixelOperator;
     color: var(--highlight);
     background-color: var(--background);
-    border-color: var(--foreground);
-    border: 1px solid;
+    border: 1px solid var(--highlight);
 }
+
+#colorbar {
+    height: 2em;
+    border: 1px solid var(--highlight);
+    width: 100%;
+}
+
+.colorButtons {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    height: 100%;
+}
+
+#colorbar button {
+    flex-grow: 1;
+    height: 1.7em;
+    border: 1px solid var(--highlight);
+    border-radius: 0;
+    padding: 0;
+    margin-right: 4px;
+}
+
+#color-red {
+    background-color: #b30000;
+}
+
+#color-orange {
+    background-color: #ff8000;
+}
+
+#color-yellow {
+    background-color: #ffffaa;
+}
+
+#color-green {
+    background-color: #6cd900;
+}
+
+#color-dkgreen {
+    background-color: #008000;
+}
+
+#color-blue {
+    background-color: #404080;
+}
+
+#color-grey {
+    background-color: #888888;
+}
+
+#color-black {
+    background-color: #000000;
+}
+
+/* .hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+*/
+
 
 .grid-container {
     display: grid;
