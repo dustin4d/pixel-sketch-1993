@@ -23,7 +23,7 @@
     margin: auto;
 }
 
-h1 {
+.tagline {
     color: var(--highlight);
     font-family: PixelOperator;
     font-size: 1em;
