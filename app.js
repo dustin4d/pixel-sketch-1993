@@ -8,11 +8,13 @@ const colorBtn = document.querySelector('#colorBtn')
 const eraseBtn = document.querySelector('#eraser')
 const clearBtn = document.querySelector('#clear')
 const palette = document.querySelectorAll('.palette')
+const colors = document.querySelector('.palette')
 const cells = document.querySelectorAll('.grid-cell')
 
 // Current pen color
 let currentColor = 'rgb(0, 0, 255)'
 
+console.log(colors)
 
 // Toggle between two bars
 colorBtn.addEventListener('click', function() {
@@ -25,10 +27,11 @@ colorBtn.addEventListener('click', function() {
     colorbar.classList.remove('hidden')
 })
 
-// Basic event listener attached to color options
+// Event listener attached to each color option
 for (const pickedColor of palette) {
     pickedColor.addEventListener('click', function(){
         console.log('Color picked!')
+        //.classList.add('.color-orange')
 
         // Revert back to toolbar
         colorbar.classList.remove('show')
@@ -38,6 +41,12 @@ for (const pickedColor of palette) {
         toolbar.classList.add('show')
     })
 }
+
+// eraseBtn just sets the pen color to null, i.e. just forcing the 
+// cell color back to what it was.
+eraseBtn.addEventListener('click', function(){
+    currentColor = null;
+})
 
 // Clear button actually just reloads the page.
 // Not fancy, but it works well.

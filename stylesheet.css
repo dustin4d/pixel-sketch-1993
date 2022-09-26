@@ -92,42 +92,39 @@
 
 
 
-/* Colorbar Definitions for the colorbar */
-#color-red {
+/* Colorbar Definitions */
+.color-red {
     background-color: #b30000;
 }
 
-#color-orange {
+.color-orange {
     background-color: #ff8000;
 }
 
-#color-yellow {
+.color-yellow {
     background-color: #ffffaa;
 }
 
-#color-green {
+.color-green {
     background-color: #6cd900;
 }
 
-#color-dkgreen {
+.color-dkgreen {
     background-color: #008000;
 }
 
-#color-blue {
+.color-blue {
     background-color: #404080;
 }
 
-#color-grey {
+.color-grey {
     background-color: #888888;
 }
 
-#color-black {
+.color-black {
     background-color: #000000;
 }
 
-.color-blue {
-    background-color: blue;
-}
 
 /* Drawing element */
 .grid-container {
