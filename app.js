@@ -13,6 +13,7 @@ const palette = document.querySelectorAll('.palette')
 let currentColor
 
 // Event Listeners
+
 colorBtn.addEventListener('click', function() {
     // Hide the toolbar
     toolbar.classList.remove('show')
@@ -23,16 +24,10 @@ colorBtn.addEventListener('click', function() {
     colorbar.classList.remove('hidden')
 })
 
-// Get the value of the element's background-color
-// then assign it to currentColor
-for(let i = 0; i < palette.length; i++) {
-    i.addEventListener('click', function() {
-        console.log(i.style.backgroundColor)
+for (const pickedColor of palette) {
+    pickedColor.addEventListener('click', function(){
+        console.log('Color picked!')
     })
-}
-
-for(let i = 0; i < palette.length; i++) {
-    console.log(`${i + 1} total colors.`)
 }
 
 // Logic
