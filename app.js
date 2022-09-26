@@ -5,6 +5,8 @@ const toolbar = document.querySelector('.toolbar')
 const colorbar = document.querySelector('.colorbar')
 const buttons = document.querySelector('button')
 const colorBtn = document.querySelector('#colorBtn')
+const eraseBtn = document.querySelector('#eraser')
+const clearBtn = document.querySelector('#clear')
 const palette = document.querySelectorAll('.palette')
 const cells = document.querySelectorAll('.grid-cell')
 
@@ -36,6 +38,13 @@ for (const pickedColor of palette) {
         toolbar.classList.add('show')
     })
 }
+
+// Clear button actually just reloads the page.
+// Not fancy, but it works well.
+clearBtn.addEventListener('click', function(){
+    location.reload()
+    console.log('Canvas cleared.')
+})
 
 // Add each grid cell with event listener as they're spawned
 // adding eventListeners retroactively seems to not work.
