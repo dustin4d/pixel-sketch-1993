@@ -5,7 +5,6 @@ const toolbar = document.querySelector('.toolbar')
 const colorbar = document.querySelector('.colorbar')
 const buttons = document.querySelector('button')
 const colorBtn = document.querySelector('#colorBtn')
-const returnBtn = document.querySelector('.return-button')
 const palette = document.querySelectorAll('.palette')
 const cells = document.querySelectorAll('.grid-cell')
 
@@ -24,7 +23,6 @@ colorBtn.addEventListener('click', function() {
     colorbar.classList.remove('hidden')
 })
 
-
 // Basic event listener attached to color options
 for (const pickedColor of palette) {
     pickedColor.addEventListener('click', function(){
@@ -39,6 +37,8 @@ for (const pickedColor of palette) {
     })
 }
 
+// Add each grid cell with event listener as they're spawned
+// adding eventListeners retroactively seems to not work.
 function addSquare() {
     const canvas = document.createElement('div')
     gridContainer.appendChild(canvas)
@@ -48,8 +48,11 @@ function addSquare() {
     })
 }
 
+// Use to set resolution for now, will be adjustable from
+// the page itself later
 let currentRes = 16;
 
+// Add a grid cell based on your resolution, set with currentRes
 for (let i = 0; i < currentRes ** 2; i++){
     addSquare();
 }
