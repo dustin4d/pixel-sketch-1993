@@ -125,6 +125,9 @@
     background-color: #000000;
 }
 
+.color-blue {
+    background-color: blue;
+}
 
 /* Drawing element */
 .grid-container {
