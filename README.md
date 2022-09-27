@@ -1,1 +1,10 @@
-# etch-a-sketch
+![Screenshot 2022-09-27 152331](https://user-images.githubusercontent.com/81985447/192627955-d1559d8b-a844-48b2-9600-9ffb6bdf64a4.png)
+
+
+# Info
+This project is a 400 x 400 drawing canvas, pixel by pixel. It does not support click-and-drag yet, though I do at some point plan to come back and implement that. I also plan to implement a dynamic pixel density option, where the size of the grid stays the same, but changes how small the pixels get, allowing for more detailed drawings.
+
+# Why this project is cool
+So, initially the idea was to have a stylistically different project than my last one, OKIZEME. I wanted to impose more limitations on myself and see how well I could figure out my own problems. In the first stages, I did actually look at other programmers' solutions, however they didn't really 'solve' anything for me, so I just used a couple ideas here and there to make what you see here. The main challenege was working with less colors. Sounds silly, but think about it. The input element lets you select any color, and is automatically stored to it's value property. Since I wanted to work with a color palette, I knew that using input type color wouldn't be feasible. So I kept to buttons, and manually set their value to my desired color palette, then attach eventListeners to each grid cell as they're spawned in. Perhaps not a very elegant or clever workaround, but I found it on my own, and it works.
+
+Another interesting thing about this project is the two bars that appear and disappear above the grid container. The solution for this is probably not very elegant, but again -- I found this out by myself, and it works. Quite well. How it works is there are two CSS classes specifically for hiding and showing elements on the page, and I use the eventListeners attached to the main color button to hide the main toolbar, and show the "colorbar". Then, on each of the color selections are their own event listeners that hide the "colorbar" and revert back to the main toolbar. 
