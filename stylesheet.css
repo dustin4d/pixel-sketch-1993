@@ -39,10 +39,6 @@
     animation-name: blink-animation;
 }
 
-input {
-    readOnly: true;
-}
-
 
 /* Toolbar and colorbar */
 .toolbar {
@@ -143,11 +139,16 @@ input {
     border: 1px solid var(--highlight);
 }
 
-.square {
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
-    margin: 0;
+.grid-cell {
+}
+
+a {
+    color: #b30000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 .resolution-tag p {
@@ -160,7 +161,4 @@ input {
 footer {
     color: var(--foreground);
     font-family: PixelOperator;
-}
-
-.grid-cell {
 }

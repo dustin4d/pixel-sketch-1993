@@ -11,6 +11,15 @@ const palette = document.querySelectorAll('.palette')
 const colors = document.querySelector('.palette')
 const cells = document.querySelectorAll('.grid-cell')
 
+// Use to set resolution for now, will be adjustable from
+// the page itself later
+let currentRes = 16
+
+// Add a grid cell based on your resolution, set with currentRes
+for (let i = 0; i < currentRes ** 2; i++){
+    addSquare();
+}
+
 /* Probably not the cleanest solution, but using input type color lets you
  * pick any color, but I want a limited palette. So I select every 
  * color individually, and use it's value property (which is empty by default)
@@ -92,11 +101,3 @@ function addSquare() {
     })
 }
 
-// Use to set resolution for now, will be adjustable from
-// the page itself later
-let currentRes = 16;
-
-// Add a grid cell based on your resolution, set with currentRes
-for (let i = 0; i < currentRes ** 2; i++){
-    addSquare();
-}
