@@ -39,6 +39,10 @@
     animation-name: blink-animation;
 }
 
+input {
+    readOnly: true;
+}
+
 
 /* Toolbar and colorbar */
 .toolbar {

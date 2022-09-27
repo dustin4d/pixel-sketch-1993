@@ -11,10 +11,31 @@ const palette = document.querySelectorAll('.palette')
 const colors = document.querySelector('.palette')
 const cells = document.querySelectorAll('.grid-cell')
 
-// Current pen color
-let currentColor = 'rgb(0, 0, 255)'
+/* Probably not the cleanest solution, but using input type color lets you
+ * pick any color, but I want a limited palette. So I select every 
+ * color individually, and use it's value property (which is empty by default)
+ * then just reference that in the eventListener when you select the color.
+ */
 
-console.log(colors)
+const redBtn = document.querySelector('.color-red')
+const orangeBtn = document.querySelector('.color-orange')
+const yellowBtn = document.querySelector('.color-yellow')
+const greenBtn = document.querySelector('.color-green')
+const dkgreenBtn = document.querySelector('.color-dkgreen')
+const blueBtn = document.querySelector('.color-blue')
+const greyBtn = document.querySelector('.color-grey')
+const blackBtn = document.querySelector('.color-black')
+redBtn.value = '#b30000'
+orangeBtn.value = '#ff8000'
+yellowBtn.value = '#ffffaa'
+greenBtn.value = '#6cd900'
+dkgreenBtn.value = '#008000'
+blueBtn.value = '#404080'
+greyBtn.value = '#888888'
+blackBtn.value = '#000000'
+
+// Current pen color
+let currentColor
 
 // Toggle between two bars
 colorBtn.addEventListener('click', function() {
@@ -39,17 +60,22 @@ for (const pickedColor of palette) {
 
         toolbar.classList.remove('hidden')
         toolbar.classList.add('show')
+
+        // Set your pen's color to whatever you just clicked
+        currentColor = pickedColor.value
     })
 }
 
-// eraseBtn just sets the pen color to null, i.e. just forcing the 
-// cell color back to what it was.
+/* eraseBtn just sets the pen color to null, i.e. just forcing the 
+ * cell color back to what it was.
+ */
 eraseBtn.addEventListener('click', function(){
     currentColor = null;
 })
 
-// Clear button actually just reloads the page.
-// Not fancy, but it works well.
+/* Clear button actually just reloads the page.
+   Not fancy, but it works well.
+ */
 clearBtn.addEventListener('click', function(){
     location.reload()
     console.log('Canvas cleared.')
