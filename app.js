@@ -1,6 +1,5 @@
 const gridCell = document.querySelector('.grid-cell')
 const gridContainer = document.querySelector('.grid-container')
-const resolutionTag = document.querySelector('.resolution-tag')
 const toolbar = document.querySelector('.toolbar')
 const colorbar = document.querySelector('.colorbar')
 const buttons = document.querySelector('button')
@@ -9,16 +8,7 @@ const eraseBtn = document.querySelector('#eraser')
 const clearBtn = document.querySelector('#clear')
 const palette = document.querySelectorAll('.palette')
 const colors = document.querySelector('.palette')
-const cells = document.querySelectorAll('.grid-cell')
-
-// Use to set resolution for now, will be adjustable from
-// the page itself later
-let currentRes = 16
-
-// Add a grid cell based on your resolution, set with currentRes
-for (let i = 0; i < currentRes ** 2; i++){
-    addSquare();
-}
+const resolutionTag = document.querySelector('.resolution-tag')
 
 /* Probably not the cleanest solution, but using input type color lets you
  * pick any color, but I want a limited palette. So I select every 
@@ -101,3 +91,24 @@ function addSquare() {
     })
 }
 
+// Use to set resolution for now, will be adjustable from
+// the page itself later
+let currentRes = 4
+
+// Add a grid cell based on your resolution, set with currentRes
+for (let i = 0; i < currentRes ** 2; i++){
+    addSquare();
+}
+
+function gridSize () {
+    gridContainer.style.gridTemplateColumns = `repeat(${currentRes}, 1fr)`
+    gridContainer.style.gridTemplateRows = `repeat(${currentRes}, 1fr)`
+}
+
+function resolutionP () {
+    const pTag = document.createElement('p')
+    resolutionTag.appendChild(pTag)
+    pTag.innerHTML = `Resolution: ${currentRes} x ${currentRes}`
+}
+resolutionP()
+gridSize()

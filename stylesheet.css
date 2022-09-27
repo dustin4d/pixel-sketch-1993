@@ -125,12 +125,11 @@
     background-color: #000000;
 }
 
-
 /* Drawing element */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
@@ -142,6 +141,13 @@
 .grid-cell {
 }
 
+.resolution-tag p {
+    margin: 0;
+
+    color: var(--highlight);
+    font-family: PixelOperator;
+}
+
 a {
     color: #b30000;
     text-decoration: none;
@@ -149,13 +155,6 @@ a {
 
 a:hover {
     color: white;
-}
-
-.resolution-tag p {
-    margin: 0;
-
-    color: var(--highlight);
-    font-family: PixelOperator;
 }
 
 footer {
