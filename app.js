@@ -93,7 +93,7 @@ function addSquare() {
 
 // Use to set resolution for now, will be adjustable from
 // the page itself later
-let currentRes = 4
+let currentRes = 32
 
 // Add a grid cell based on your resolution, set with currentRes
 for (let i = 0; i < currentRes ** 2; i++){
